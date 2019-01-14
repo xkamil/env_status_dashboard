@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 public class StashClient {
 
     private static final Logger logger = LoggerFactory.getLogger(StashClient.class);
+
     private RestTemplateBuilder restTemplateBuilder;
 
     @Value("${stash.url}")
@@ -30,6 +31,8 @@ public class StashClient {
     }
 
     public ResponseEntity<String> getMeta() {
+        logger.info("Authorized as {} / {}", username, password);
+
         return restTemplateBuilder.rootUri(baseUrl)
                 .basicAuthentication(username, password)
                 .build()

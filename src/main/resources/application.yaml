@@ -3,3 +3,6 @@ stash:
   credentials:
     username: ${STASH_USERNAME}
     password: ${STASH_PASSWORD}
+spring:
+  resources:
+    static-locations: "classpath:/public"
