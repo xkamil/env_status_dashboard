@@ -1,0 +1,5 @@
+stash:
+  url: http://127.0.0.1:3001
+  credentials:
+    username: ${STASH_USERNAME}
+    password: ${STASH_PASSWORD}
